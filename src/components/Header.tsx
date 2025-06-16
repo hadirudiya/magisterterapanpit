@@ -14,6 +14,11 @@ const Header = () => {
 
         {/* Right side: Navigation Links */}
         <nav className="flex items-center space-x-4">
+          <Link to="/about-us">
+            <Button variant="ghost" className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+              Tentang Kami
+            </Button>
+          </Link>
           <Link to="/curriculum">
             <Button variant="ghost" className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
               Kurikulum

@@ -8,8 +8,9 @@ import NotFound from "./pages/NotFound";
 import CurriculumPage from "./pages/CurriculumPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import RegistrationFormPage from "./pages/RegistrationFormPage";
+import AboutUsPage from "./pages/AboutUsPage"; // Import the new AboutUsPage
 import Header from "./components/Header";
-import Footer from "./components/Footer"; // Import the new Footer component
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -19,19 +20,20 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen"> {/* Add flex column to push footer to bottom */}
+        <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-grow"> {/* Make main content grow */}
+          <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/curriculum" element={<CurriculumPage />} />
               <Route path="/register" element={<RegistrationPage />} />
               <Route path="/register/form" element={<RegistrationFormPage />} />
+              <Route path="/about-us" element={<AboutUsPage />} /> {/* New route for About Us */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-          <Footer /> {/* Render the Footer component here */}
+          <Footer />
         </div>
       </BrowserRouter>
     </TooltipProvider>
