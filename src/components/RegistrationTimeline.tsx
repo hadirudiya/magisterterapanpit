@@ -16,14 +16,14 @@ const TimelineStep: React.FC<TimelineStepProps> = ({ stepNumber, title, descript
       alignment === 'right' ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
-        "flex flex-col items-center relative",
+        "flex flex-col items-center relative w-full", // Ensure inner div takes full width for mobile alignment
         alignment === 'right' ? "md:flex-row-reverse" : "md:flex-row"
       )}>
         {/* Step Content Card */}
         <Card className={cn(
-          "w-full md:w-[calc(50%-2rem)] shadow-lg rounded-xl p-4",
+          "w-full md:w-[calc(50%-1.5rem)] shadow-lg rounded-xl p-4", // Adjusted width to bring it closer
           "bg-white dark:bg-gray-800",
-          alignment === 'right' ? "md:mr-8" : "md:ml-8"
+          alignment === 'right' ? "md:mr-6" : "md:ml-6" // Adjusted margin for closer proximity
         )}>
           <CardHeader className="p-0 mb-2">
             <div className="flex items-center space-x-2">
