@@ -91,7 +91,7 @@ const HeroSection = () => {
           Ayo segera daftar
         </p>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-          Wujudkan impian Bersama Polimedia
+          Wujudkan Impian Bersama Magister Terapan Manajemen Pemasaran Inovasi dan Teknologi
         </h2>
         <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-6">
           Dengan berbagai fasilitas yang akan membantu mewujudkan cita-cita anda
