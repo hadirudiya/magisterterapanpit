@@ -11,6 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils"; // Import cn utility for combining tailwind classes
 
 const RegistrationPage = () => {
   return (
@@ -54,10 +55,21 @@ const RegistrationPage = () => {
                       <a href="https://meet.jit.si/sosialisasiMTMPITPolimedia2025" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                         https://meet.jit.si/sosialisasiMTMPITPolimedia2025
                       </a>
-                      <Button variant="outline" className="mt-2 w-full text-primary border-primary hover:bg-primary/10" onClick={() => console.log('Konfirmasi Kehadiran clicked')}>
+                      {/* Changed Button to a tag with button styling */}
+                      <a
+                        href="https://forms.gle/PxgExnkYrA2vKSFB8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(
+                          "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+                          "border border-input bg-background hover:bg-accent hover:text-accent-foreground", // Default button outline styles
+                          "mt-2 w-full text-primary border-primary hover:bg-primary/10" // Specific styles for this button
+                        )}
+                        style={{ padding: '0.5rem 1rem' }} // Manual padding to match button size
+                      >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bar-chart-3 mr-2 h-4 w-4"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
                         Konfirmasi Kehadiran Sosialisasi SMB Magister
-                      </Button>
+                      </a>
                     </TableCell>
                     <TableCell>
                       12 April 2025 (online jam 13.00 WIB via Zoom)
