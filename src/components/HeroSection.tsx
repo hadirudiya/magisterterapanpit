@@ -58,7 +58,9 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <p className="text-lg sm:text-xl font-semibold text-primary mb-2">Ayo segera daftar</p>
+        <p className="text-lg sm:text-xl font-semibold text-primary mb-2 font-amarillo"> {/* Menambahkan font-amarillo di sini */}
+          Ayo segera daftar
+        </p>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
           Wujudkan impian Bersama Polimedia
         </h2>
