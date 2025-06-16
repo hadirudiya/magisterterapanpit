@@ -67,7 +67,7 @@ const RegistrationPage = () => {
                         )}
                         style={{ padding: '0.5rem 1rem' }} // Manual padding to match button size
                       >
-                        <svg xmlns="http://www.w3.org/2020/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bar-chart-3 mr-2 h-4 w-4"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bar-chart-3 mr-2 h-4 w-4"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
                         Konfirmasi Kehadiran Sosialisasi SMB Magister
                       </a>
                     </TableCell>
@@ -98,7 +98,7 @@ const RegistrationPage = () => {
                   <TableRow>
                     <TableCell className="font-medium">Daftar Ulang</TableCell>
                     <TableCell>4 Agustus 2025 - 9 Agustus 2025</TableCell>
-                    <TableCell>28 Jul 2025 - 1 Aug 2025</TableCell>
+                    <TableCell>1 September 2025 - 6 September 2025</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pelantikan Mahasiswa Baru</TableCell>
