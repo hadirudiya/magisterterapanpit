@@ -187,6 +187,27 @@ const RegistrationPage = () => {
           </CardContent>
         </Card>
 
+        {/* New Map Section */}
+        <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 text-left mt-8">
+          <CardHeader className="p-0 mb-4">
+            <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">Lokasi Polimedia</CardTitle>
+          </CardHeader>
+          <CardContent className="p-0">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 Aspect Ratio */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.9999999999995!2d106.82299999999999!3d-6.300000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed1f00000001%3A0x0!2sPoliteknik%20Negeri%20Media%20Kreatif!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </CardContent>
+        </Card>
+
         <div className="mt-8 text-center">
           <Link to="/register/form">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
