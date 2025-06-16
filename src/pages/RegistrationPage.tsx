@@ -43,7 +43,7 @@ const RegistrationPage = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Pendaftaran dan upload berkas persyaratan</TableCell>
-                    <TableCell>23 Juni 2025 - 31 Juli 2025</TableCell>
+                    <TableCell>23 Juni 2025 - 30 Juni 2025</TableCell>
                     <TableCell>12 Jun 2025 - 10 Jul 2025</TableCell>
                   </TableRow>
                   <TableRow>
@@ -70,7 +70,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pengumuman Lulus Tes Tertulis</TableCell>
-                    <TableCell>16 Mei 2025</TableCell>
+                    <TableCell>16 Mei 225</TableCell>
                     <TableCell>18 Jul 2025</TableCell>
                   </TableRow>
                   <TableRow>
