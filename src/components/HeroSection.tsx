@@ -57,11 +57,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Top Navigation Bar */}
-      <nav className="relative z-10 flex items-center justify-between p-4 bg-gray-900 bg-opacity-70 text-white">
+      <nav className="relative z-10 flex items-center justify-between p-4 bg-white text-gray-900 shadow-md">
         <div className="flex items-center space-x-2">
-          {/* Placeholder for Polimedia Logo */}
-          <span className="font-bold text-xl text-primary">POLITEKNIK NEGERI</span>
-          <span className="text-lg">Media Kreatif</span>
+          {/* Polimedia Logo */}
+          <img src="/logo.png" alt="Politeknik Negeri Media Kreatif Logo" className="h-10" />
         </div>
         {/* Mobile menu icon would go here */}
       </nav>
