@@ -90,7 +90,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pelantikan Mahasiswa Baru</TableCell>
-                    <TableCell colSpan={2} className="text-center">5 Agustus 2025</TableCell>
+                    <TableCell colSpan={2} className="text-center">11 Agustus 2025</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Matrikulasi</TableCell>
