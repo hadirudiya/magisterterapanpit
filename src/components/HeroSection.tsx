@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -11,16 +11,25 @@ const careerProspects = [
   "Brand Manager untuk Produk Digital",
 ];
 
+const bannerImages = [
+  "/banner-startup.jpg",
+  "/banner-business-development.jpeg",
+  "/banner-digital-marketing.jpeg",
+];
+
 const TYPING_SPEED = 100; // ms per character
 const DELETING_SPEED = 50; // ms per character
 const PAUSE_BETWEEN_PHRASES = 1500; // ms
+const IMAGE_CHANGE_INTERVAL = 5000; // ms (5 seconds)
 
 const HeroSection = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Typing animation effect
   useEffect(() => {
     const handleTyping = () => {
       const fullText = careerProspects[currentPhraseIndex];
@@ -43,22 +52,42 @@ const HeroSection = () => {
       }
     };
 
-    const timer = setTimeout(
+    const typingTimer = setTimeout(
       handleTyping,
       isDeleting ? DELETING_SPEED : TYPING_SPEED
     );
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(typingTimer);
   }, [currentText, isDeleting, charIndex, currentPhraseIndex]);
 
+  // Image carousel effect
+  useEffect(() => {
+    const imageTimer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length);
+    }, IMAGE_CHANGE_INTERVAL);
+
+    return () => clearInterval(imageTimer);
+  }, []);
+
+  const handlePrevImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + bannerImages.length) % bannerImages.length);
+  }, []);
+
+  const handleNextImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length);
+  }, []);
+
   return (
-    <div className="relative h-[600px] md:h-[700px] lg:h-[800px] bg-cover bg-center" style={{ backgroundImage: 'url(/placeholder-banner.jpg)' }}>
+    <div 
+      className="relative h-[600px] md:h-[700px] lg:h-[800px] bg-cover bg-center transition-all duration-1000 ease-in-out" 
+      style={{ backgroundImage: `url(${bannerImages[currentImageIndex]})` }}
+    >
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <p className="text-lg sm:text-xl font-semibold text-primary mb-2 font-amarillo"> {/* Menambahkan font-amarillo di sini */}
+        <p className="text-lg sm:text-xl font-semibold text-primary mb-2 font-amarillo">
           Ayo segera daftar
         </p>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
@@ -84,22 +113,22 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Carousel Navigation (Placeholder) */}
+      {/* Carousel Navigation */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4 z-10">
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20" onClick={handlePrevImage}>
           <ChevronLeft className="h-6 w-6" />
         </Button>
         <div className="flex space-x-2">
-          {careerProspects.map((_, index) => (
+          {bannerImages.map((_, index) => (
             <span
               key={index}
               className={`h-2 w-2 rounded-full ${
-                index === currentPhraseIndex ? 'bg-white' : 'bg-gray-400'
+                index === currentImageIndex ? 'bg-white' : 'bg-gray-400'
               }`}
             ></span>
           ))}
         </div>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20" onClick={handleNextImage}>
           <ChevronRight className="h-6 w-6" />
         </Button>
       </div>
