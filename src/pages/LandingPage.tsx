@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Briefcase, Target, BookOpen } from 'lucide-react';
-import CurriculumSection from '@/components/CurriculumSection'; // Import the new component
+import { CheckCircle2, Briefcase, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 const LandingPage = () => {
   return (
@@ -16,10 +16,15 @@ const LandingPage = () => {
           <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
             Program studi pascasarjana (S2) yang berfokus pada pengembangan kemampuan strategis dalam pemasaran berbasis teknologi dan inovasi. Program ini ditujukan untuk profesional yang ingin memperdalam pengetahuan tentang bagaimana memasarkan produk atau layanan teknologi serta mengelola inovasi di era digital.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex justify-center space-x-4">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               Daftar Sekarang
             </Button>
+            <Link to="/curriculum">
+              <Button size="lg" variant="outline" className="text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400 text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-50 dark:hover:bg-gray-700">
+                Kurikulum
+              </Button>
+            </Link>
           </div>
         </header>
 
@@ -63,11 +68,7 @@ const LandingPage = () => {
           </Card>
         </section>
 
-        {/* New Curriculum Section */}
-        <CurriculumSection />
-
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {/* Removed "Target Peserta" section */}
+        <section className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
           <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
             <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-4">
               <Briefcase className="h-8 w-8 text-orange-600 dark:text-orange-400" />
