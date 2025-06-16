@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Phone } from 'lucide-react'; // Import Phone icon
 import {
   Table,
   TableBody,
@@ -165,6 +165,25 @@ const RegistrationPage = () => {
             <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-4">
               Keterangan: *Mahasiswa yang mengikuti matrikulasi ditetapkan berdasarkan hasil tes tertulis dan wawancara yang dilaksanakan oleh program studi.
             </p>
+          </CardContent>
+        </Card>
+
+        {/* New Contact Person Section */}
+        <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 mt-8">
+          <CardHeader className="p-0 mb-4">
+            <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">Narahubung Program Studi Magister Terapan</CardTitle>
+          </CardHeader>
+          <CardContent className="p-0 text-gray-700 dark:text-gray-300 space-y-4">
+            <div className="flex items-start">
+              <Phone className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <p className="font-semibold">Manajemen Pemasaran, Inovasi dan Teknologi</p>
+                <p>Dr. Arrahmah Aprilia, ST.,MT</p>
+                <a href="https://wa.me/6281219533966" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">
+                  WhatsApp: 081219533966
+                </a>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
