@@ -50,9 +50,9 @@ const RegistrationPage = () => {
                     <TableCell className="font-medium">Sosialisasi Program Magister Terapan</TableCell>
                     <TableCell>
                       2 Juli 2025 (Online jam 13.00 WIB via Zoom)<br />
-                      <span className="font-semibold">Link Zoom:</span>{" "}
-                      <a href="https://s.id/sosialisasiSMB-Magister2025" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                        https://s.id/sosialisasiSMB-Magister2025
+                      <span className="font-semibold">Link Meet Online:</span>{" "}
+                      <a href="https://meet.jit.si/sosialisasiMTMPITPolimedia2025" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        https://meet.jit.si/sosialisasiMTMPITPolimedia2025
                       </a>
                       <Button variant="outline" className="mt-2 w-full text-primary border-primary hover:bg-primary/10" onClick={() => console.log('Konfirmasi Kehadiran clicked')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bar-chart-3 mr-2 h-4 w-4"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
