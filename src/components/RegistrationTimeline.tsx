@@ -21,9 +21,9 @@ const TimelineStep: React.FC<TimelineStepProps> = ({ stepNumber, title, descript
       )}>
         {/* Step Content Card */}
         <Card className={cn(
-          "w-full md:w-[calc(50%-1rem)] shadow-lg rounded-xl p-4", // Changed margin from 2rem (mr-8/ml-8) to 1rem (mr-4/ml-4)
+          "w-full md:w-[calc(50%-2rem)] shadow-lg rounded-xl p-4",
           "bg-white dark:bg-gray-800",
-          alignment === 'right' ? "md:mr-4" : "md:ml-4" // Adjusted margin here
+          alignment === 'right' ? "md:mr-8" : "md:ml-8"
         )}>
           <CardHeader className="p-0 mb-2">
             <div className="flex items-center space-x-2">
