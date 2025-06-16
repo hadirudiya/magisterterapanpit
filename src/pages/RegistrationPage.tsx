@@ -58,6 +58,13 @@ const RegistrationPage = () => {
             </p>
           </CardContent>
         </Card>
+        <div className="mt-8 text-center">
+          <Link to="/register/form">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+              Isi Formulir Sekarang
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
