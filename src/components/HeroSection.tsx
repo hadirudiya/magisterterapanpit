@@ -63,14 +63,6 @@ const HeroSection = () => {
           <span className="font-bold text-xl text-primary">POLITEKNIK NEGERI</span>
           <span className="text-lg">Media Kreatif</span>
         </div>
-        <ul className="hidden md:flex space-x-6">
-          <li><Link to="#" className="hover:text-primary transition-colors">Tentang Kami</Link></li>
-          <li><Link to="#" className="hover:text-primary transition-colors">LAKIP</Link></li>
-          <li><Link to="#" className="hover:text-primary transition-colors">Akademik</Link></li>
-          <li><Link to="#" className="hover:text-primary transition-colors">Publikasi</Link></li>
-          <li><Link to="#" className="hover:text-primary transition-colors">PMB</Link></li>
-          <li><Link to="#" className="hover:text-primary transition-colors">Aktivitas Kampus</Link></li>
-        </ul>
         {/* Mobile menu icon would go here */}
       </nav>
 
