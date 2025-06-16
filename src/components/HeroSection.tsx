@@ -59,9 +59,11 @@ const HeroSection = () => {
       {/* Top Navigation Bar */}
       <nav className="relative z-10 flex items-center justify-between p-4 bg-white text-gray-900 shadow-md">
         <div className="flex items-center space-x-2">
-          {/* Polimedia Logo (removed) */}
+          {/* Left side content (if any) */}
         </div>
-        {/* Mobile menu icon would go here */}
+        <div className="flex items-center">
+          <img src="/logo.png" alt="Polimedia Logo" className="h-10 w-auto" />
+        </div>
       </nav>
 
       {/* Main Content */}
