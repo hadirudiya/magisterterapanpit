@@ -126,9 +126,6 @@ const RegistrationTimeline: React.FC = () => {
           </div>
         ))}
       </div>
-      <p className="text-center text-gray-600 dark:text-gray-400 text-lg mt-12">
-        smb.polban.ac.id
-      </p>
     </div>
   );
 };
