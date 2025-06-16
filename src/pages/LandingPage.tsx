@@ -69,12 +69,6 @@ const LandingPage = () => {
             </CardContent>
           </Card>
         </section>
-
-        <footer className="text-center mt-12">
-          <p className="text-gray-600 dark:text-gray-400 text-sm">
-            Politeknik Negeri Media Kreatif 2025
-          </p>
-        </footer>
       </div>
     </div>
   );
