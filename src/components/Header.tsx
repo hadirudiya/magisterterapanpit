@@ -6,9 +6,13 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        {/* Left side: Home Link (logo removed) */}
+        {/* Left side: Home Link with Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          {/* Logo Polimedia telah dihapus */}
+          <img 
+            src="/logoPolimedia.jpeg" 
+            alt="Polimedia Logo" 
+            className="h-10 w-auto" // Adjust height as needed
+          />
         </Link>
 
         {/* Right side: Navigation Links */}
