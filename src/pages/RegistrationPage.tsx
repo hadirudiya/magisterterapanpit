@@ -72,7 +72,7 @@ const RegistrationPage = () => {
                       </a>
                     </TableCell>
                     <TableCell>
-                      12 April 2025 (online jam 13.00 WIB via Zoom)
+                      28 Juli 2025 (online jam 13.00 WIB via Meet Online)
                     </TableCell>
                   </TableRow>
                   <TableRow>
