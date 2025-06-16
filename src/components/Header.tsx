@@ -8,8 +8,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Left side: Home Link/Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          {/* <img src="/logo.png" alt="Polimedia Logo" className="h-8 w-auto" /> */}
-          <span className="text-lg font-bold text-gray-900 dark:text-white hidden sm:block">Polimedia</span>
+          <img src="/logo.png" alt="Polimedia Logo" className="h-8 w-auto" />
+          {/* <span className="text-lg font-bold text-gray-900 dark:text-white hidden sm:block">Polimedia</span> */}
         </Link>
 
         {/* Right side: Navigation Links */}
