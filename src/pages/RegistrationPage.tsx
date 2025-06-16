@@ -151,7 +151,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Perkuliahan</TableCell>
-                    <TableCell>Rp 6.250.000,-</TableCell>
+                    <TableCell>Rp 7.500.000,-</TableCell>
                     <TableCell>Setiap semester</TableCell>
                   </TableRow>
                   <TableRow>
