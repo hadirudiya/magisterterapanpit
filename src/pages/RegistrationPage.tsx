@@ -49,7 +49,7 @@ const RegistrationPage = () => {
                   <TableRow>
                     <TableCell className="font-medium">Sosialisasi Program Magister Terapan</TableCell>
                     <TableCell>
-                      12 April 2025 (Online jam 13.00 WIB via Zoom)<br />
+                      2 Juli 2025 (Online jam 13.00 WIB via Zoom)<br />
                       <span className="font-semibold">Link Zoom:</span>{" "}
                       <a href="https://s.id/sosialisasiSMB-Magister2025" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                         https://s.id/sosialisasiSMB-Magister2025
@@ -70,7 +70,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pengumuman Lulus Tes Tertulis</TableCell>
-                    <TableCell>16 Mei 225</TableCell>
+                    <TableCell>16 Mei 2025</TableCell>
                     <TableCell>18 Jul 2025</TableCell>
                   </TableRow>
                   <TableRow>
