@@ -14,6 +14,14 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -68,6 +76,56 @@ const RegistrationFormPage = () => {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight text-center mb-8">
           Formulir Pendaftaran
         </h1>
+
+        {/* Biaya Pendidikan Section */}
+        <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 mb-8">
+          <CardHeader className="p-0 mb-4">
+            <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">Biaya Pendidikan Mahasiswa Reguler</CardTitle>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Perkuliahan dilaksanakan senin - jumat, jam 07.00 - 16.00 WIB.</p>
+          </CardHeader>
+          <CardContent className="p-0 text-gray-700 dark:text-gray-300">
+            <div className="overflow-x-auto">
+              <Table className="min-w-full">
+                <TableHeader>
+                  <TableRow className="bg-gray-100 dark:bg-gray-700">
+                    <TableHead className="w-[40%] text-gray-900 dark:text-white font-semibold">Program Studi Magister Terapan</TableHead>
+                    <TableHead className="w-[30%] text-gray-900 dark:text-white font-semibold">Jumlah</TableHead>
+                    <TableHead className="w-[30%] text-gray-900 dark:text-white font-semibold">Keterangan</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Pendaftaran</TableCell>
+                    <TableCell>Rp 500.000,-</TableCell>
+                    <TableCell>Dibayarkan satu kali</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Prodi Keuangan dan Perbankan Syariah</TableCell>
+                    <TableCell>Rp 6.250.000,-</TableCell>
+                    <TableCell rowSpan={3} className="align-top">Setiap semester</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Prodi Pemasaran, Inovasi dan Teknologi</TableCell>
+                    <TableCell>Rp 6.250.000,-</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Prodi Rekayasa Infrastruktur</TableCell>
+                    <TableCell>Rp 9.000.000,-</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Matrikulasi*</TableCell>
+                    <TableCell>Rp 200.000,-</TableCell>
+                    <TableCell>Per Sks (Maksimum 6 SKS)</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+            <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-4">
+              Keterangan: *Mahasiswa yang mengikuti matrikulasi ditetapkan berdasarkan hasil tes tertulis dan wawancara yang dilaksanakan oleh program studi.
+            </p>
+          </CardContent>
+        </Card>
+
         <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
           <CardHeader className="p-0 mb-4">
             <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">Persyaratan Administratif</CardTitle>
