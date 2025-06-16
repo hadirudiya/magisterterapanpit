@@ -93,7 +93,7 @@ const RegistrationPage = () => {
                   <TableRow>
                     <TableCell className="font-medium">Pengumuman Akhir<br /><span className="text-sm italic">(Dapat dicek pada menu Hasil setelah login)</span></TableCell>
                     <TableCell>2 Agustus 2025</TableCell>
-                    <TableCell>28 Juli 2025</TableCell>
+                    <TableCell>30 Agustus 2025</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Daftar Ulang</TableCell>
