@@ -9,7 +9,7 @@ const Header = () => {
         {/* Left side: Home Link with Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="/logoPolimedia.jpeg" // Menggunakan nama file yang benar
+            src="/logoPolimediaJPEG.jpeg" // Menggunakan jalur file yang benar
             alt="Polimedia Logo" 
             className="h-10 w-auto" // Adjust height as needed
           />
