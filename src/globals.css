@@ -134,8 +134,8 @@
 /* Tambahkan kode @font-face ini di bagian paling atas file */
 @font-face {
   font-family: 'Amarillo';
-  src: url('/fonts/Amarillo.woff2') format('woff2'),
-       url('/fonts/Amarillo.woff') format('woff');
+  src: url('/Amarillo.woff2') format('woff2'),
+       url('/Amarillo.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
