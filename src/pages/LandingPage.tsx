@@ -67,19 +67,7 @@ const LandingPage = () => {
         <CurriculumSection />
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
-            <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-4">
-              <Target className="h-8 w-8 text-purple-600 dark:text-purple-400" />
-              <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">Target Peserta</CardTitle>
-            </CardHeader>
-            <CardContent className="p-0 text-gray-700 dark:text-gray-300">
-              <ul className="list-disc list-inside space-y-2">
-                <li>Profesional di bidang pemasaran, teknologi, atau bisnis yang ingin meningkatkan kompetensi.</li>
-                <li>Entrepreneur atau pelaku start-up yang ingin mengembangkan strategi pemasaran berbasis inovasi.</li>
-              </ul>
-            </CardContent>
-          </Card>
-
+          {/* Removed "Target Peserta" section */}
           <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
             <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-4">
               <Briefcase className="h-8 w-8 text-orange-600 dark:text-orange-400" />
