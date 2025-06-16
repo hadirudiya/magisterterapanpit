@@ -88,13 +88,8 @@ const LandingPage = () => {
 
         <footer className="text-center mt-12">
           <p className="text-gray-600 dark:text-gray-400 text-sm">
-            Tertarik untuk bergabung? Hubungi kami untuk informasi lebih lanjut!
+            Politeknik Negeri Media Kreatif 2025
           </p>
-          <div className="mt-4">
-            <Button variant="outline" className="text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700">
-              Hubungi Kami
-            </Button>
-          </div>
         </footer>
       </div>
     </div>
