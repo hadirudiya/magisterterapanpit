@@ -75,7 +75,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Wawancara</TableCell>
-                    <TableCell>19 Mei 2025 - 24 Mei 2025</TableCell>
+                    <TableCell>21 Juli 2025 - 26 Juli 2025</TableCell>
                     <TableCell>21 Jul 2025 - 26 Jul 2025</TableCell>
                   </TableRow>
                   <TableRow>
