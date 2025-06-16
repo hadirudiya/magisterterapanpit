@@ -22,20 +22,20 @@ const TimelineStep: React.FC<TimelineStepProps> = ({ stepNumber, title, descript
         {/* Step Content Card */}
         <Card className={cn(
           "w-full md:w-[calc(50%-1.5rem)] shadow-lg rounded-xl p-4", // Adjusted width to bring it closer
-          "bg-white dark:bg-gray-800",
+          "bg-primary dark:bg-primary", // Changed background to primary color
           alignment === 'right' ? "md:mr-6" : "md:ml-6" // Adjusted margin for closer proximity
         )}>
           <CardHeader className="p-0 mb-2">
             <div className="flex items-center space-x-2">
-              <span className="text-sm font-bold text-white bg-primary px-3 py-1 rounded-md">
+              <span className="text-sm font-bold bg-white text-primary px-3 py-1 rounded-md"> {/* Changed background to white and text to primary */}
                 {stepNumber}
               </span>
-              <CardTitle className="text-lg font-bold text-gray-900 dark:text-white">
+              <CardTitle className="text-lg font-bold text-white dark:text-white"> {/* Changed text to white */}
                 {title}
               </CardTitle>
             </div>
           </CardHeader>
-          <CardContent className="p-0 text-gray-700 dark:text-gray-300 text-sm">
+          <CardContent className="p-0 text-white dark:text-gray-200 text-sm"> {/* Changed text to white/light gray */}
             {description}
           </CardContent>
         </Card>
