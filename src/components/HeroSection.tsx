@@ -56,16 +56,6 @@ const HeroSection = () => {
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Top Navigation Bar */}
-      <nav className="relative z-10 flex items-center justify-between p-4 bg-white text-gray-900 shadow-md">
-        <div className="flex items-center space-x-2">
-          {/* Left side content (if any) */}
-        </div>
-        <div className="flex items-center">
-          <img src="/logo.png" alt="Polimedia Logo" className="h-10 w-auto" />
-        </div>
-      </nav>
-
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
         <p className="text-lg sm:text-xl font-semibold text-primary mb-2">Ayo segera daftar</p>
