@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Briefcase, Target, BookOpen } from 'lucide-react';
+import CurriculumSection from '@/components/CurriculumSection'; // Import the new component
 
 const LandingPage = () => {
   return (
@@ -61,6 +62,9 @@ const LandingPage = () => {
             </CardContent>
           </Card>
         </section>
+
+        {/* New Curriculum Section */}
+        <CurriculumSection />
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
