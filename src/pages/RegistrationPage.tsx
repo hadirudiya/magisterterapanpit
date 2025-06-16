@@ -195,7 +195,7 @@ const RegistrationPage = () => {
           <CardContent className="p-0">
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 Aspect Ratio */}
               <iframe
-                src="https://maps.app.goo.gl/4PnCFGeYzydFNqQm8"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3604679321093!2d106.82455607370183!3d-6.347348362096998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec2e63dcf7b7%3A0x39a93c506b0174b8!2sPoliteknik%20Negeri%20Media%20Kreatif%20Jakarta!5e0!3m2!1sid!2sid!4v1750109345056!5m2!1sid!2sid"
                 width="100%"
                 height="100%"
                 style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
