@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import CurriculumPage from "./pages/CurriculumPage"; // Import the new CurriculumPage
+import CurriculumPage from "./pages/CurriculumPage";
+import RegistrationPage from "./pages/RegistrationPage"; // Import the new RegistrationPage
 
 const queryClient = new QueryClient();
 
@@ -17,7 +18,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/curriculum" element={<CurriculumPage />} /> {/* New route for CurriculumPage */}
+          <Route path="/curriculum" element={<CurriculumPage />} />
+          <Route path="/register" element={<RegistrationPage />} /> {/* New route for RegistrationPage */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

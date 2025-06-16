@@ -17,9 +17,11 @@ const LandingPage = () => {
             Program studi pascasarjana (S2) yang berfokus pada pengembangan kemampuan strategis dalam pemasaran berbasis teknologi dan inovasi. Program ini ditujukan untuk profesional yang ingin memperdalam pengetahuan tentang bagaimana memasarkan produk atau layanan teknologi serta mengelola inovasi di era digital.
           </p>
           <div className="mt-8 flex justify-center space-x-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-              Daftar Sekarang
-            </Button>
+            <Link to="/register"> {/* Link the button to the new registration page */}
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                Daftar Sekarang
+              </Button>
+            </Link>
             <Link to="/curriculum">
               <Button size="lg" variant="outline" className="text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400 text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-50 dark:hover:bg-gray-700">
                 Kurikulum
