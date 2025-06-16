@@ -85,7 +85,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Daftar Ulang</TableCell>
-                    <TableCell>2 Juni 2025 - 6 Juni 2025</TableCell>
+                    <TableCell>4 Agustus 2025 - 9 Agustus 2025</TableCell>
                     <TableCell>28 Jul 2025 - 1 Aug 2025</TableCell>
                   </TableRow>
                   <TableRow>
