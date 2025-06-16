@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } => "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from 'lucide-react';
@@ -80,7 +80,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pengumuman Akhir<br /><span className="text-sm italic">(Dapat dicek pada menu Hasil setelah login)</span></TableCell>
-                    <TableCell>2 Juni 2025 18:00 WIB</TableCell>
+                    <TableCell>2 Agustus 2025</TableCell>
                     <TableCell>28 Juli 2025</TableCell>
                   </TableRow>
                   <TableRow>
