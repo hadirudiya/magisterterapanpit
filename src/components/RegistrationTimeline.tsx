@@ -105,7 +105,7 @@ const RegistrationTimeline: React.FC = () => {
   return (
     <div className="relative py-8">
       <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight text-center mb-12">
-        Tahapan SMB MAGISTER 2025
+        Tahapan SMB MT MPIT Polimedia 2025
       </h2>
       <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/50 dark:bg-primary/70 rounded-full hidden md:block"></div>
       <div className="space-y-12">
