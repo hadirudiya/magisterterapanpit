@@ -9,7 +9,6 @@ const Header = () => {
         {/* Left side: Home Link/Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img src="/logo.png" alt="Polimedia Logo" className="h-8 w-auto" />
-          {/* <span className="text-lg font-bold text-gray-900 dark:text-white hidden sm:block">Polimedia</span> */}
         </Link>
 
         {/* Right side: Navigation Links */}
