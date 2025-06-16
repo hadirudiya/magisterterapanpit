@@ -65,12 +65,12 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Tes Tertulis</TableCell>
-                    <TableCell>3 Mei 2025</TableCell>
+                    <TableCell>5 Juli 2025</TableCell>
                     <TableCell>12 Jul 2025</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pengumuman Lulus Tes Tertulis</TableCell>
-                    <TableCell>16 Mei 2025</TableCell>
+                    <TableCell>19 Juli 2025</TableCell>
                     <TableCell>18 Jul 2025</TableCell>
                   </TableRow>
                   <TableRow>
