@@ -83,7 +83,7 @@ const HeroSection = () => {
       style={{ backgroundImage: `url(${bannerImages[currentImageIndex]})` }}
     >
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-black/40"></div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
