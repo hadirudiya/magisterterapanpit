@@ -12,6 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils"; // Import cn utility for combining tailwind classes
+import RegistrationTimeline from '@/components/RegistrationTimeline'; // Import the new timeline component
 
 const RegistrationPage = () => {
   return (
@@ -120,6 +121,12 @@ const RegistrationPage = () => {
             </p>
           </CardContent>
         </Card>
+
+        {/* New Registration Timeline Section */}
+        <section className="mt-12">
+          <RegistrationTimeline />
+        </section>
+
         <div className="mt-8 text-center">
           <Link to="/register/form">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
