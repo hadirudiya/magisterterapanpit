@@ -43,7 +43,7 @@ const RegistrationPage = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Pendaftaran dan upload berkas persyaratan</TableCell>
-                    <TableCell>3 Feb 2025 - 25 Apr 2025</TableCell>
+                    <TableCell>23 Juni 2025 - 31 Juli 2025</TableCell>
                     <TableCell>12 Jun 2025 - 10 Jul 2025</TableCell>
                   </TableRow>
                   <TableRow>
@@ -105,47 +105,6 @@ const RegistrationPage = () => {
             </div>
             <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-4">
               *Gelombang 2 akan dilaksanakan apabila kuota belum terpenuhi
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
-          <CardHeader className="p-0 mb-4">
-            <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">Proses Seleksi</CardTitle>
-          </CardHeader>
-          <CardContent className="p-0 text-gray-700 dark:text-gray-300 space-y-4">
-            <div>
-              <h4 className="text-lg font-semibold text-primary dark:text-primary">Tes Tertulis (jika ada):</h4>
-              <ul className="list-disc list-inside space-y-1 mt-2">
-                <li>Tes potensi akademik (logika, numerik, verbal).</li>
-                <li>Esai tentang isu pemasaran teknologi/trend inovasi.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-primary dark:text-primary">Wawancara:</h4>
-              <ul className="list-disc list-inside space-y-1 mt-2">
-                <li>Fokus pada motivasi, pengalaman, dan rencana kontribusi setelah lulus.</li>
-                <li>Untuk program terapan, pertanyaan sering terkait studi kasus industri.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-primary dark:text-primary">Portofolio (opsional):</h4>
-              <ul className="list-disc list-inside space-y-1 mt-2">
-                <li>Diutamakan bagi yang punya pengalaman proyek pemasaran digital, start-up, atau inovasi produk.</li>
-              </ul>
-            </div>
-
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Jalur Khusus</h3>
-            <ul className="list-disc list-inside space-y-1">
-              <li><strong className="font-semibold">Jalur Mitra Industri:</strong> Mahasiswa direkomendasikan perusahaan mitra (biasanya dapat pembiayaan).</li>
-              <li><strong className="font-semibold">Jalur Beasiswa:</strong> Contoh: LPDP, BAPPENAS, atau beasiswa korporasi (e.g., Djarum, BRI).</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Biaya Pendaftaran</h3>
-            <p>
-              Berkisar Rp 300.000 – Rp 1.000.000 tergantung kampus.
             </p>
           </CardContent>
         </Card>
