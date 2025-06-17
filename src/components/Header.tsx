@@ -13,24 +13,12 @@ const Header = () => {
   const closeSheet = () => setIsSheetOpen(false);
 
   const handleAuthAction = async () => {
-    console.log("handleAuthAction dipanggil. Sesi saat ini:", session);
     if (session) {
       // If session exists, it means user is logged in, so sign them out
-      try {
-        const { error } = await supabase.auth.signOut();
-        if (error) {
-          console.error("Error saat logout:", error);
-          // Anda bisa menampilkan toast error di sini jika mau
-        } else {
-          console.log("Logout berhasil.");
-        }
-      } catch (err) {
-        console.error("Exception saat logout:", err);
-      }
+      await supabase.auth.signOut();
       closeSheet();
     } else {
       // If no session, navigate to login page
-      console.log("Tidak ada sesi, mengarahkan ke halaman login.");
       closeSheet();
     }
   };
