@@ -61,14 +61,19 @@ const Header = () => {
                     Pendaftaran
                   </Button>
                 </Link>
-                {/* Conditional Auth Button for Mobile */}
-                {session ? (
-                  <Button 
-                    onClick={handleAuthAction} 
-                    className="w-full bg-red-600 hover:bg-red-700 text-white text-lg"
-                  >
-                    Keluar
-                  </Button>
+                {/* Conditional Auth Button and User Email for Mobile */}
+                {session && session.user ? (
+                  <>
+                    <span className="text-sm text-gray-600 dark:text-gray-400 px-4 py-2 truncate">
+                      {session.user.email}
+                    </span>
+                    <Button 
+                      onClick={handleAuthAction} 
+                      className="w-full bg-red-600 hover:bg-red-700 text-white text-lg"
+                    >
+                      Keluar
+                    </Button>
+                  </>
                 ) : (
                   <Link to="/login" onClick={closeSheet}>
                     <Button className="w-full bg-primary hover:bg-primary/90 text-white text-lg">
@@ -98,14 +103,19 @@ const Header = () => {
               Pendaftaran
             </Button>
           </Link>
-          {/* Conditional Auth Button for Desktop */}
-          {session ? (
-            <Button 
-              onClick={handleAuthAction} 
-              className="bg-red-600 hover:bg-red-700 text-white"
-            >
-              Keluar
-            </Button>
+          {/* Conditional Auth Button and User Email for Desktop */}
+          {session && session.user ? (
+            <>
+              <span className="text-sm text-gray-600 dark:text-gray-400">
+                {session.user.email}
+              </span>
+              <Button 
+                onClick={handleAuthAction} 
+                className="bg-red-600 hover:bg-red-700 text-white"
+              >
+                Keluar
+              </Button>
+            </>
           ) : (
             <Link to="/login">
               <Button className="bg-primary hover:bg-primary/90 text-white">
