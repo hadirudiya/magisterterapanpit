@@ -17,8 +17,8 @@ const AboutUsPage = () => {
         </div>
         
         <img 
-          src="/logoPolimediaJPEG.jpeg" 
-          alt="Polimedia Logo" 
+          src="" 
+          alt="" 
           className="mx-auto mb-8 max-h-32 sm:max-h-40 lg:max-h-48 object-contain" 
         />
 
