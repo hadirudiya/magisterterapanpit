@@ -11,7 +11,7 @@ const Header = () => {
           <img 
             src="/logoPolimediaJPEG.jpeg" // Menggunakan jalur file yang benar
             alt="Polimedia Logo" 
-            className="h-10 w-auto" // Adjust height as needed
+            className="h-12 w-auto object-contain" // Mengubah tinggi menjadi h-12 dan menambahkan object-contain
           />
         </Link>
 
