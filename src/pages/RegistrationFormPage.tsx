@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,6 +26,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
+import { supabase } from '@/integrations/supabase/client'; // Import Supabase client
+import { useSession } from '@/components/SessionContextProvider'; // Import useSession
 
 // Define the form schema using Zod
 const formSchema = z.object({
@@ -33,14 +35,17 @@ const formSchema = z.object({
   email: z.string().email("Format email tidak valid.").min(1, "Email wajib diisi."),
   nomorTelepon: z.string().min(10, "Nomor telepon minimal 10 digit.").max(15, "Nomor telepon maksimal 15 digit."),
   ijazahS1D4: z.string().min(1, "Bidang ijazah S1/D4 wajib diisi."),
-  ipk: z.string().regex(/^\d+(\.\d{1,2})?$/, "IPK harus berupa angka (contoh: 3.50).").min(1, "IPK wajib diisi."),
+  ipk: z.coerce.number().min(0, "IPK tidak boleh negatif.").max(4.00, "IPK maksimal 4.00."), // Changed to number
   pengalamanKerja: z.string().optional(),
-  cvResume: z.string().min(1, "Link CV/Resume wajib diisi."),
-  suratRekomendasi: z.string().min(1, "Link Surat Rekomendasi wajib diisi."),
-  proposalStudi: z.string().min(1, "Link Proposal Rencana Studi wajib diisi."),
+  cvResume: z.string().url("Link CV/Resume harus berupa URL yang valid.").min(1, "Link CV/Resume wajib diisi."),
+  suratRekomendasi: z.string().url("Link Surat Rekomendasi harus berupa URL yang valid.").min(1, "Link Surat Rekomendasi wajib diisi."),
+  proposalStudi: z.string().url("Link Proposal Rencana Studi harus berupa URL yang valid.").min(1, "Link Proposal Rencana Studi wajib diisi."),
 });
 
 const RegistrationFormPage = () => {
+  const navigate = useNavigate();
+  const { session } = useSession(); // Get the current session
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,7 +53,7 @@ const RegistrationFormPage = () => {
       email: "",
       nomorTelepon: "",
       ijazahS1D4: "",
-      ipk: "",
+      ipk: 0, // Default to 0 for number type
       pengalamanKerja: "",
       cvResume: "",
       suratRekomendasi: "",
@@ -56,11 +61,45 @@ const RegistrationFormPage = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log("Form submitted with values:", values);
-    toast.success("Formulir pendaftaran berhasil dikirim!");
-    // Here you would typically send this data to a backend API
-    // For now, we'll just log it and show a toast.
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    if (!session?.user) {
+      toast.error("Anda harus masuk untuk mengirimkan formulir pendaftaran.");
+      navigate('/login');
+      return;
+    }
+
+    const loadingToastId = toast.loading("Mengirimkan formulir pendaftaran...");
+
+    try {
+      const { data, error } = await supabase
+        .from('registrations')
+        .insert([
+          {
+            user_id: session.user.id,
+            nama_lengkap: values.namaLengkap,
+            email: values.email,
+            nomor_telepon: values.nomorTelepon,
+            ijazah_s1_d4: values.ijazahS1D4,
+            ipk: values.ipk,
+            pengalaman_kerja: values.pengalamanKerja,
+            cv_resume_link: values.cvResume,
+            surat_rekomendasi_link: values.suratRekomendasi,
+            proposal_studi_link: values.proposalStudi,
+          },
+        ]);
+
+      if (error) {
+        console.error("Error submitting form:", error);
+        toast.error("Gagal mengirimkan formulir: " + error.message, { id: loadingToastId });
+      } else {
+        console.log("Form submitted successfully:", data);
+        toast.success("Formulir pendaftaran berhasil dikirim!", { id: loadingToastId });
+        form.reset(); // Reset form after successful submission
+      }
+    } catch (error) {
+      console.error("Unexpected error:", error);
+      toast.error("Terjadi kesalahan tak terduga saat mengirimkan formulir.", { id: loadingToastId });
+    }
   };
 
   return (
@@ -143,7 +182,7 @@ const RegistrationFormPage = () => {
                     <FormItem>
                       <FormLabel>IPK Minimum (Skala 4.00)</FormLabel>
                       <FormControl>
-                        <Input placeholder="Contoh: 3.50" {...field} />
+                        <Input placeholder="Contoh: 3.50" {...field} type="number" step="0.01" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
