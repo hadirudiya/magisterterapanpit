@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } => "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Baris ini diperbaiki
 import { Menu } from 'lucide-react';
 import { useSession } from '@/components/SessionContextProvider'; // Import useSession
 import { supabase } from '@/integrations/supabase/client'; // Import supabase client
