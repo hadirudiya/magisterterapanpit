@@ -3,8 +3,86 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const CurriculumPage = () => {
+  const semesters = [
+    {
+      value: "semester-1",
+      title: "Semester 1 (Dasar Bisnis & Analitik)",
+      colorClass: "text-blue-600 dark:text-blue-400",
+      content: (
+        <>
+          <ul className="list-disc list-inside space-y-1 mt-2">
+            <li>Statistika Bisnis & Analisis Keputusan: Fondasi data-driven marketing.</li>
+            <li>Sistem & TI: Pemahaman infrastruktur teknologi pendukung pemasaran (e.g., CRM, AI tools).</li>
+            <li>Manajemen Keuangan: Penting untuk menghitung ROI kampanye digital atau proyek inovasi.</li>
+            <li>Ekonomi Kreatif: Konteks industri kreatif (startup, content, digital produk).</li>
+          </ul>
+          <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
+            👉 Tujuan: Membekali kemampuan analitis dan manajerial umum sebelum masuk ke spesialisasi.
+          </p>
+        </>
+      ),
+    },
+    {
+      value: "semester-2",
+      title: "Semester 2 (Inti Pemasaran Teknologi)",
+      colorClass: "text-green-600 dark:text-green-400",
+      content: (
+        <>
+          <ul className="list-disc list-inside space-y-1 mt-2">
+            <li>Technology Marketing: Strategi pemasaran produk tech (SaaS, IoT, dll.).</li>
+            <li>Customer Behavior & Branding: Psikologi konsumen di era digital.</li>
+            <li>Manajemen Teknologi & Inovasi: Proses inovasi dari ide ke komersialisasi.</li>
+            <li>Rantai Pasok: Efisiensi distribusi produk teknologi.</li>
+          </ul>
+          <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
+            👉 Fokus pada integrasi teknologi, perilaku konsumen, dan logistik.
+          </p>
+        </>
+      ),
+    },
+    {
+      value: "semester-3",
+      title: "Semester 3 (Strategi & Kreativitas)",
+      colorClass: "text-purple-600 dark:text-purple-400",
+      content: (
+        <>
+          <ul className="list-disc list-inside space-y-1 mt-2">
+            <li>Strategic Digital Marketing: SEO, ads, growth hacking.</li>
+            <li>Creative Marketing: Storytelling, konten viral, experiential marketing.</li>
+            <li>Manajemen Merk Strategis: Brand positioning di pasar kompetitif.</li>
+            <li>Manajemen Proyek & SDM: Kepemimpinan dalam tim inovasi.</li>
+          </ul>
+          <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
+            👉 Kombinasi hard skills (strategi) + soft skills (kreativitas, leadership).
+          </p>
+        </>
+      ),
+    },
+    {
+      value: "semester-4",
+      title: "Semester 4 (Tesis)",
+      colorClass: "text-orange-600 dark:text-orange-400",
+      content: (
+        <>
+          <ul className="list-disc list-inside space-y-1 mt-2">
+            <li>Metodologi & Tesis: Aplikasi langsung ke kasus riil (e.g., strategi pemasaran untuk startup tech).</li>
+          </ul>
+          <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
+            👉 Biasanya berbasis proyek atau kolaborasi dengan industri.
+          </p>
+        </>
+      ),
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -29,76 +107,18 @@ const CurriculumPage = () => {
 
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Breakdown Per Semester:</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Semester 1 Card */}
-              <Card className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm">
-                <CardHeader className="p-0 mb-2">
-                  <CardTitle className="text-lg font-semibold text-blue-600 dark:text-blue-400">Semester 1 (Dasar Bisnis & Analitik)</CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 text-gray-700 dark:text-gray-300">
-                  <ul className="list-disc list-inside space-y-1 mt-2">
-                    <li>Statistika Bisnis & Analisis Keputusan: Fondasi data-driven marketing.</li>
-                    <li>Sistem & TI: Pemahaman infrastruktur teknologi pendukung pemasaran (e.g., CRM, AI tools).</li>
-                    <li>Manajemen Keuangan: Penting untuk menghitung ROI kampanye digital atau proyek inovasi.</li>
-                    <li>Ekonomi Kreatif: Konteks industri kreatif (startup, content, digital produk).</li>
-                  </ul>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
-                    👉 Tujuan: Membekali kemampuan analitis dan manajerial umum sebelum masuk ke spesialisasi.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Semester 2 Card */}
-              <Card className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm">
-                <CardHeader className="p-0 mb-2">
-                  <CardTitle className="text-lg font-semibold text-green-600 dark:text-green-400">Semester 2 (Inti Pemasaran Teknologi)</CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 text-gray-700 dark:text-gray-300">
-                  <ul className="list-disc list-inside space-y-1 mt-2">
-                    <li>Technology Marketing: Strategi pemasaran produk tech (SaaS, IoT, dll.).</li>
-                    <li>Customer Behavior & Branding: Psikologi konsumen di era digital.</li>
-                    <li>Manajemen Teknologi & Inovasi: Proses inovasi dari ide ke komersialisasi.</li>
-                    <li>Rantai Pasok: Efisiensi distribusi produk teknologi.</li>
-                  </ul>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
-                    👉 Fokus pada integrasi teknologi, perilaku konsumen, dan logistik.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Semester 3 Card */}
-              <Card className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm">
-                <CardHeader className="p-0 mb-2">
-                  <CardTitle className="text-lg font-semibold text-purple-600 dark:text-purple-400">Semester 3 (Strategi & Kreativitas)</CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 text-gray-700 dark:text-gray-300">
-                  <ul className="list-disc list-inside space-y-1 mt-2">
-                    <li>Strategic Digital Marketing: SEO, ads, growth hacking.</li>
-                    <li>Creative Marketing: Storytelling, konten viral, experiential marketing.</li>
-                    <li>Manajemen Merk Strategis: Brand positioning di pasar kompetitif.</li>
-                    <li>Manajemen Proyek & SDM: Kepemimpinan dalam tim inovasi.</li>
-                  </ul>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
-                    👉 Kombinasi hard skills (strategi) + soft skills (kreativitas, leadership).
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Semester 4 Card */}
-              <Card className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm">
-                <CardHeader className="p-0 mb-2">
-                  <CardTitle className="text-lg font-semibold text-orange-600 dark:text-orange-400">Semester 4 (Tesis)</CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 text-gray-700 dark:text-gray-300">
-                  <ul className="list-disc list-inside space-y-1 mt-2">
-                    <li>Metodologi & Tesis: Aplikasi langsung ke kasus riil (e.g., strategi pemasaran untuk startup tech).</li>
-                  </ul>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
-                    👉 Biasanya berbasis proyek atau kolaborasi dengan industri.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            <Accordion type="single" collapsible className="w-full">
+              {semesters.map((semester) => (
+                <AccordionItem key={semester.value} value={semester.value} className="border-b border-gray-200 dark:border-gray-700">
+                  <AccordionTrigger className={`text-lg font-semibold ${semester.colorClass} hover:no-underline`}>
+                    {semester.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 dark:text-gray-300 pb-4">
+                    {semester.content}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
 
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Keunikan Program Ini:</h3>
             <ul className="list-disc list-inside space-y-1">
