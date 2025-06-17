@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } => "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
 import { useSession } from '@/components/SessionContextProvider'; // Import useSession
 import { supabase } from '@/integrations/supabase/client'; // Import supabase client
@@ -13,12 +13,24 @@ const Header = () => {
   const closeSheet = () => setIsSheetOpen(false);
 
   const handleAuthAction = async () => {
+    console.log("handleAuthAction called. Current session:", session);
     if (session) {
       // If session exists, it means user is logged in, so sign them out
-      await supabase.auth.signOut();
+      console.log("Session exists, attempting to sign out...");
+      const { error } = await supabase.auth.signOut();
+      if (error) {
+        console.error("Error signing out:", error);
+        // Optionally, show a toast notification for the error
+        // toast.error("Gagal keluar: " + error.message);
+      } else {
+        console.log("Successfully signed out.");
+        // Optionally, show a toast notification for success
+        // toast.success("Berhasil keluar!");
+      }
       closeSheet();
     } else {
       // If no session, navigate to login page
+      console.log("No session, navigating to login page.");
       closeSheet();
     }
   };
