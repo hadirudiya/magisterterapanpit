@@ -26,8 +26,10 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
           navigate('/'); // Redirect to home if user logs in from login page
         }
       } else if (event === 'SIGNED_OUT') {
+        // Only redirect to login if the user was previously signed in and is now signing out
+        // and they are not already on the login page.
         if (location.pathname !== '/login') {
-          navigate('/login'); // Redirect to login if user signs out from any other page
+          navigate('/login');
         }
       }
     });
@@ -36,9 +38,7 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
     supabase.auth.getSession().then(({ data: { session: initialSession } }) => {
       setSession(initialSession);
       setLoading(false);
-      if (!initialSession && location.pathname !== '/login') {
-        navigate('/login');
-      }
+      // No initial redirect if no session, allowing users to browse
     });
 
     return () => subscription.unsubscribe();

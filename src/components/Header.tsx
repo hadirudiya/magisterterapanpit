@@ -3,11 +3,25 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
+import { useSession } from '@/components/SessionContextProvider'; // Import useSession
+import { supabase } from '@/integrations/supabase/client'; // Import supabase client
 
 const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const { session } = useSession(); // Get session from context
 
   const closeSheet = () => setIsSheetOpen(false);
+
+  const handleAuthAction = async () => {
+    if (session) {
+      // If session exists, it means user is logged in, so sign them out
+      await supabase.auth.signOut();
+      closeSheet();
+    } else {
+      // If no session, navigate to login page
+      closeSheet();
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md">
@@ -47,11 +61,21 @@ const Header = () => {
                     Pendaftaran
                   </Button>
                 </Link>
-                <Link to="/register/form" onClick={closeSheet}>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-white text-lg">
-                    Daftar Sekarang
+                {/* Conditional Auth Button for Mobile */}
+                {session ? (
+                  <Button 
+                    onClick={handleAuthAction} 
+                    className="w-full bg-red-600 hover:bg-red-700 text-white text-lg"
+                  >
+                    Keluar
                   </Button>
-                </Link>
+                ) : (
+                  <Link to="/login" onClick={closeSheet}>
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-white text-lg">
+                      Masuk / Daftar
+                    </Button>
+                  </Link>
+                )}
               </nav>
             </SheetContent>
           </Sheet>
@@ -74,11 +98,21 @@ const Header = () => {
               Pendaftaran
             </Button>
           </Link>
-          <Link to="/register/form">
-            <Button className="bg-primary hover:bg-primary/90 text-white">
-              Daftar Sekarang
+          {/* Conditional Auth Button for Desktop */}
+          {session ? (
+            <Button 
+              onClick={handleAuthAction} 
+              className="bg-red-600 hover:bg-red-700 text-white"
+            >
+              Keluar
             </Button>
-          </Link>
+          ) : (
+            <Link to="/login">
+              <Button className="bg-primary hover:bg-primary/90 text-white">
+                Masuk / Daftar
+              </Button>
+            </Link>
+          )}
         </nav>
       </div>
     </header>
