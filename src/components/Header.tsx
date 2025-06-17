@@ -15,7 +15,7 @@ const Header = () => {
         {/* Left side: Home Link with Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="/logoPolimediaJPEG.jpeg" 
+            src="/logoPolimediaJPEGheader.jpeg" // Mengganti jalur gambar ke logo baru
             alt="Polimedia Logo" 
             className="h-12 w-auto object-contain" 
           />
