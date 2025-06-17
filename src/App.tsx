@@ -11,8 +11,9 @@ import RegistrationFormPage from "./pages/RegistrationFormPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Login from "./pages/Login"; // Import the new Login page
-import { SessionContextProvider } from "./components/SessionContextProvider"; // Import the new SessionContextProvider
+import Login from "./pages/Login";
+import { SessionContextProvider } from "./components/SessionContextProvider";
+import ProtectedRoute from "./components/ProtectedRoute"; // Import the new ProtectedRoute
 
 const queryClient = new QueryClient();
 
@@ -22,7 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <SessionContextProvider> {/* Wrap the entire app with SessionContextProvider */}
+        <SessionContextProvider>
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
@@ -30,9 +31,14 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/curriculum" element={<CurriculumPage />} />
                 <Route path="/register" element={<RegistrationPage />} />
-                <Route path="/register/form" element={<RegistrationFormPage />} />
                 <Route path="/about-us" element={<AboutUsPage />} />
-                <Route path="/login" element={<Login />} /> {/* Add the new login route */}
+                <Route path="/login" element={<Login />} />
+
+                {/* Protected Route for Registration Form */}
+                <Route element={<ProtectedRoute />}>
+                  <Route path="/register/form" element={<RegistrationFormPage />} />
+                </Route>
+
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
