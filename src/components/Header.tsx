@@ -1,35 +1,32 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Baris ini diperbaiki
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
-import { useSession } from '@/components/SessionContextProvider'; // Import useSession
-import { supabase } from '@/integrations/supabase/client'; // Import supabase client
+import { useSession } from '@/components/SessionContextProvider';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from "sonner"; // Import toast from sonner
 
 const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const { session } = useSession(); // Get session from context
+  const { session } = useSession();
 
   const closeSheet = () => setIsSheetOpen(false);
 
   const handleAuthAction = async () => {
     console.log("handleAuthAction called. Current session:", session);
     if (session) {
-      // If session exists, it means user is logged in, so sign them out
       console.log("Session exists, attempting to sign out...");
       const { error } = await supabase.auth.signOut();
       if (error) {
         console.error("Error signing out:", error);
-        // Optionally, show a toast notification for the error
-        // toast.error("Gagal keluar: " + error.message);
+        toast.error("Gagal keluar: " + error.message); // Show error toast
       } else {
         console.log("Successfully signed out.");
-        // Optionally, show a toast notification for success
-        // toast.success("Berhasil keluar!");
+        toast.success("Berhasil keluar!"); // Show success toast
       }
       closeSheet();
     } else {
-      // If no session, navigate to login page
       console.log("No session, navigating to login page.");
       closeSheet();
     }
@@ -41,7 +38,7 @@ const Header = () => {
         {/* Left side: Home Link with Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="public/logoPolimediaJPEGheader.jpeg" // Mengganti jalur gambar ke logo baru
+            src="public/logoPolimediaJPEGheader.jpeg"
             alt="" 
             className="h-12 w-auto object-contain" 
           />
