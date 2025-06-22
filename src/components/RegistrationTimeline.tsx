@@ -106,7 +106,7 @@ const RegistrationTimeline: React.FC = () => {
     <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 mb-8"> {/* Added Card wrapper */}
       <CardHeader className="p-0 mb-4">
         <CardTitle className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight text-center mb-8">
-          Tahapan SMB MT MPIT Polimedia 2025
+          Tahapan SMB MT PIT Polimedia 2025
         </CardTitle>
       </CardHeader>
       <CardContent className="p-0">
