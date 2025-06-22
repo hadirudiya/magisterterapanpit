@@ -88,7 +88,7 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <p className="text-lg sm:text-xl font-semibold text-primary mb-2 font-amarillo">
+        <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-2 font-amarillo tracking-wide">
           Ayo segera daftar
         </p>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
