@@ -12,13 +12,10 @@ const careerProspects = [
 ];
 
 const bannerImages = [
-  "/banner-startup.jpg",
-  "/banner-business-development.jpeg",
-  "/banner-digital-marketing.jpeg",
-  "/polimedia-tower-aerial.jpeg", // Gambar aerial baru
-  "/polimedia-path.jpeg", // Gambar jalan masuk baru
-  "/polimedia-front-gate-2.jpeg", // Gambar gerbang depan baru
-  "/polimedia-front-gate-3.jpeg", // Gambar gerbang depan lainnya
+  "/polimedia-tower-aerial.jpeg",
+  "/polimedia-path.jpeg",
+  "/polimedia-front-gate-2.jpeg",
+  "/polimedia-front-gate-3.jpeg",
 ];
 
 const TYPING_SPEED = 100; // ms per character
