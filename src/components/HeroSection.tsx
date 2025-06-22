@@ -15,7 +15,10 @@ const bannerImages = [
   "/banner-startup.jpg",
   "/banner-business-development.jpeg",
   "/banner-digital-marketing.jpeg",
-  "/polimedia-tower.jpeg", // Menambahkan gambar baru di sini
+  "/polimedia-tower-aerial.jpeg", // Gambar aerial baru
+  "/polimedia-path.jpeg", // Gambar jalan masuk baru
+  "/polimedia-front-gate-2.jpeg", // Gambar gerbang depan baru
+  "/polimedia-front-gate-3.jpeg", // Gambar gerbang depan lainnya
 ];
 
 const TYPING_SPEED = 100; // ms per character
