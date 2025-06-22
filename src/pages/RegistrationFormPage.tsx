@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Download } from 'lucide-react'; // Import Download icon
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -237,6 +237,16 @@ const RegistrationFormPage = () => {
                         <Input placeholder="Link ke Google Drive/Dropbox/dll." {...field} />
                       </FormControl>
                       <FormMessage />
+                      <div className="mt-2">
+                        <a 
+                          href="/Format_Proposal_Penelitian.docx" 
+                          download 
+                          className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium"
+                        >
+                          <Download className="mr-2 h-4 w-4" />
+                          Unduh Format Proposal Penelitian
+                        </a>
+                      </div>
                     </FormItem>
                   )}
                 />
