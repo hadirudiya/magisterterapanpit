@@ -83,7 +83,7 @@ const RegistrationPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pengumuman Lulus Tes Tertulis</TableCell>
-                    <TableCell>19 Juli 2025</TableCell>
+                    <TableCell>19 Juli 22025</TableCell>
                     <TableCell>16 Agustus 2025</TableCell>
                   </TableRow>
                   <TableRow>
@@ -177,7 +177,7 @@ const RegistrationPage = () => {
             <div className="flex items-start">
               <Phone className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
               <div>
-                <p className="font-semibold">Manajemen Pemasaran, Inovasi dan Teknologi</p>
+                <p className="font-semibold">Pemasaran, Inovasi dan Teknologi</p>
                 <p>Dr. Arrahmah Aprilia, ST.,MT</p>
                 <a href="https://wa.me/6281219533966" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">
                   WhatsApp: 081219533966

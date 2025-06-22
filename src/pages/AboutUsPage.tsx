@@ -23,7 +23,7 @@ const AboutUsPage = () => {
         />
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight mb-6">
-          Magister Terapan Manajemen Pemasaran Inovasi dan Teknologi
+          Magister Terapan Pemasaran Inovasi dan Teknologi
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
           Politeknik Negeri Media Kreatif (Polimedia) adalah institusi pendidikan tinggi vokasi yang berfokus pada pengembangan sumber daya manusia di bidang industri kreatif. Program Magister Terapan Pemasaran, Inovasi, dan Teknologi dirancang untuk menghasilkan pemimpin dan inovator yang siap menghadapi tantangan di era digital.
