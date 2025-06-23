@@ -32,7 +32,23 @@ const HeroSection = () => {
   // Typing animation effect
   useEffect(() => {
     const handleTyping = () => {
+      // Defensive check: Ensure careerProspects is a valid array and not empty
+      if (!Array.isArray(careerProspects) || careerProspects.length === 0) {
+        setCurrentText(''); // Clear text if no phrases
+        setCharIndex(0);
+        setIsDeleting(false);
+        return; // Stop execution if data is invalid
+      }
+
       const fullText = careerProspects[currentPhraseIndex];
+
+      // Defensive check for fullText in case currentPhraseIndex is somehow invalid
+      if (typeof fullText !== 'string') {
+        setCurrentText('');
+        setCharIndex(0);
+        setIsDeleting(false);
+        return;
+      }
 
       if (isDeleting) {
         if (charIndex > 0) {
