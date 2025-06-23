@@ -60,7 +60,7 @@ const LandingPage = () => {
             </CardHeader>
             <CardContent className="p-0 text-gray-700 dark:text-gray-300">
               <ul className="list-disc list-inside space-y-2">
-                <li>Digital Marketing Strategist</li>
+                <li>Head Of Marketing and Inovation</li>
                 <li>Product Manager (Teknologi)</li>
                 <li>Innovation Consultant</li>
                 <li>Business Development (Tech Industry)</li>
