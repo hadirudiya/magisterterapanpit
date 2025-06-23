@@ -25,6 +25,7 @@ interface Registration {
   cv_resume_link: string;
   surat_rekomendasi_link: string;
   proposal_studi_link: string;
+  portofolio_link?: string; // New field for portofolio
   created_at: string;
 }
 
@@ -94,6 +95,7 @@ const ReviewerDashboard = () => {
                       <TableHead className="text-gray-900 dark:text-white font-semibold">CV/Resume</TableHead>
                       <TableHead className="text-gray-900 dark:text-white font-semibold">Surat Rekomendasi</TableHead>
                       <TableHead className="text-gray-900 dark:text-white font-semibold">Proposal Studi</TableHead>
+                      <TableHead className="text-gray-900 dark:text-white font-semibold">Portofolio</TableHead> {/* New Table Head */}
                       <TableHead className="text-gray-900 dark:text-white font-semibold">Tanggal Daftar</TableHead>
                     </TableRow>
                   </TableHeader>
@@ -120,6 +122,13 @@ const ReviewerDashboard = () => {
                         <TableCell>
                           {reg.proposal_studi_link ? (
                             <a href={reg.proposal_studi_link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400 flex items-center">
+                              Lihat <ExternalLink className="ml-1 h-4 w-4" />
+                            </a>
+                          ) : "N/A"}
+                        </TableCell>
+                        <TableCell>
+                          {reg.portofolio_link ? ( {/* New Table Cell */}
+                            <a href={reg.portofolio_link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400 flex items-center">
                               Lihat <ExternalLink className="ml-1 h-4 w-4" />
                             </a>
                           ) : "N/A"}
