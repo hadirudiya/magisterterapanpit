@@ -39,7 +39,7 @@ const CurriculumPage = () => {
       content: (
         <>
           <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>Technology Marketing: Strategi pemasaran produk tech (SaaS, IoT, dll.).</li>
+            <li>Technologi Marketing</li>
             <li>Customer Behavior & Branding: Psikologi konsumen di era digital.</li>
             <li>Manajemen Teknologi & Inovasi: Proses inovasi dari ide ke komersialisasi.</li>
             <li>Rantai Pasok: Efisiensi distribusi produk teknologi.</li>
