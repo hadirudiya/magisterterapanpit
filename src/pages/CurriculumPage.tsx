@@ -44,6 +44,7 @@ const CurriculumPage = () => {
             <li>Sustaibility Rantai Pasok</li>
             <li>Inovasi Bisnis berbasis Teknologi</li>
             <li>Metodologi</li>
+            <li>Seminar Hasil</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
             👉 Fokus pada integrasi teknologi, perilaku konsumen, dan logistik.
