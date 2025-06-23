@@ -121,7 +121,7 @@ const CurriculumPage = () => {
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Prospek Karir Lulusan:</h3>
             <ul className="list-disc list-inside space-y-1">
               <li>Head Of Marketing and Innovation</li>
-              <li>Digital Transformation Consultant</li>
+              <li>Director of Marketing and Innovation</li>
               <li>Innovation Manager di perusahaan korporat</li>
               <li>Entrepreneur di bidang tech-based business</li>
               <li>Brand Strategist untuk produk digital</li>
