@@ -101,8 +101,8 @@ const RegistrationPage = () => {
                     <TableCell colSpan={2} className="text-center">25 Agustus 2025</TableCell>
                   </TableRow>
                   <TableRow className="bg-gray-100 dark:bg-gray-700">
-                    <TableCell className="font-semibold text-gray-900 dark:text-white">Awal perkuliahan semester Ganjil 2026/2027</TableCell>
-                    <TableCell colSpan={2} className="text-center font-semibold text-gray-900 dark:text-white">22 September 2025</TableCell>
+                    <TableCell className="font-semibold text-gray-900 dark:text-white">Awal Perkuliahan</TableCell>
+                    <TableCell colSpan={2} className="text-center font-semibold text-gray-900 dark:text-white">1 September 2025</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
