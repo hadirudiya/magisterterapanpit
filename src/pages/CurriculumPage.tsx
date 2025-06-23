@@ -109,7 +109,6 @@ const CurriculumPage = () => {
               <li>Director of Marketing and Innovation</li>
               <li>Head of Brand Marketing</li>
               <li>Managing Director of Small and Medium Enterprises</li>
-              <li>Brand Strategist untuk produk digital</li>
             </ul>
           </CardContent>
         </Card>
