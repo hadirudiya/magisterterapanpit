@@ -14,8 +14,10 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import { SessionContextProvider } from "./components/SessionContextProvider";
 import ProtectedRoute from "./components/ProtectedRoute";
-import AdminProtectedRoute from "./components/AdminProtectedRoute"; // Import the new AdminProtectedRoute
-import AdminDashboard from "./pages/AdminDashboard"; // Import the new AdminDashboard
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
+import AdminDashboard from "./pages/AdminDashboard";
+import ReviewerProtectedRoute from "./components/ReviewerProtectedRoute"; // Import the new ReviewerProtectedRoute
+import ReviewerDashboard from "./pages/ReviewerDashboard"; // Import the new ReviewerDashboard
 
 const queryClient = new QueryClient();
 
@@ -44,6 +46,11 @@ const App = () => (
                 {/* Protected Route for Admin Dashboard (requires admin role) */}
                 <Route element={<AdminProtectedRoute />}>
                   <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                </Route>
+
+                {/* Protected Route for Reviewer Dashboard (requires reviewer role) */}
+                <Route element={<ReviewerProtectedRoute />}>
+                  <Route path="/reviewer/dashboard" element={<ReviewerDashboard />} />
                 </Route>
 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

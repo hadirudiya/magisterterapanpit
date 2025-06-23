@@ -6,7 +6,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 interface SessionContextType {
   session: Session | null;
   loading: boolean;
-  isAdmin: boolean; // Menambahkan properti isAdmin
+  isAdmin: boolean;
+  isReviewer: boolean; // Menambahkan properti isReviewer
 }
 
 const SessionContext = createContext<SessionContextType | undefined>(undefined);
@@ -14,7 +15,8 @@ const SessionContext = createContext<SessionContextType | undefined>(undefined);
 export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
-  const [isAdmin, setIsAdmin] = useState(false); // State baru untuk isAdmin
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isReviewer, setIsReviewer] = useState(false); // State baru untuk isReviewer
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,16 +24,15 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
       setSession(currentSession);
       setLoading(false);
-      // Memeriksa peran admin dari user_metadata
+      // Memeriksa peran admin dan reviewer dari user_metadata
       setIsAdmin(currentSession?.user?.user_metadata?.role === 'admin');
+      setIsReviewer(currentSession?.user?.user_metadata?.role === 'reviewer');
 
       if (event === 'SIGNED_IN' || event === 'USER_UPDATED') {
         if (location.pathname === '/login') {
           navigate('/'); // Redirect ke home jika user login dari halaman login
         }
       } else if (event === 'SIGNED_OUT') {
-        // Hanya redirect ke login jika user sebelumnya login dan sekarang logout
-        // dan mereka tidak sedang di halaman login.
         if (location.pathname !== '/login') {
           navigate('/login');
         }
@@ -42,15 +43,15 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
     supabase.auth.getSession().then(({ data: { session: initialSession } }) => {
       setSession(initialSession);
       setLoading(false);
-      // Memeriksa peran admin saat pemuatan awal
+      // Memeriksa peran admin dan reviewer saat pemuatan awal
       setIsAdmin(initialSession?.user?.user_metadata?.role === 'admin');
+      setIsReviewer(initialSession?.user?.user_metadata?.role === 'reviewer');
     });
 
     return () => subscription.unsubscribe();
   }, [navigate, location.pathname]);
 
   if (loading) {
-    // Anda bisa menampilkan spinner loading di sini
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-gray-600 dark:text-gray-400">Memuat sesi...</p>
@@ -59,7 +60,7 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
   }
 
   return (
-    <SessionContext.Provider value={{ session, loading, isAdmin }}>
+    <SessionContext.Provider value={{ session, loading, isAdmin, isReviewer }}>
       {children}
     </SessionContext.Provider>
   );

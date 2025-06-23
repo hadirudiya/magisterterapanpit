@@ -9,7 +9,7 @@ import { toast } from "sonner"; // Import toast from sonner
 
 const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const { session, isAdmin } = useSession(); // Dapatkan isAdmin dari useSession
+  const { session, isAdmin, isReviewer } = useSession(); // Dapatkan isAdmin dan isReviewer dari useSession
 
   const closeSheet = () => setIsSheetOpen(false);
 
@@ -77,6 +77,13 @@ const Header = () => {
                     </Button>
                   </Link>
                 )}
+                {isReviewer && ( // Tampilkan tautan Dashboard Reviewer hanya jika isReviewer true
+                  <Link to="/reviewer/dashboard" onClick={closeSheet}>
+                    <Button variant="ghost" className="w-full justify-start text-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Dashboard Reviewer
+                    </Button>
+                  </Link>
+                )}
                 {/* Conditional Auth Button and User Email for Mobile */}
                 {session && session.user ? (
                   <>
@@ -123,6 +130,13 @@ const Header = () => {
             <Link to="/admin/dashboard">
               <Button variant="ghost" className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                 Dashboard Admin
+              </Button>
+            </Link>
+          )}
+          {isReviewer && ( // Tampilkan tautan Dashboard Reviewer hanya jika isReviewer true
+            <Link to="/reviewer/dashboard">
+              <Button variant="ghost" className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                Dashboard Reviewer
               </Button>
             </Link>
           )}
