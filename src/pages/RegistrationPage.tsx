@@ -51,7 +51,7 @@ const RegistrationPage = () => {
                   <TableRow>
                     <TableCell className="font-medium">Sosialisasi Program Magister Terapan</TableCell>
                     <TableCell>
-                      2 Juli 2025 (Online jam 13.00 WIB via Zoom)<br />
+                      21 Juli 2025 (Online jam 13.00 WIB via Zoom)<br />
                       <span className="font-semibold">Link Meet Online:</span>{" "}
                       <a href="https://meet.jit.si/sosialisasiMTMPITPolimedia2025" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                         https://meet.jit.si/sosialisasiMTMPITPolimedia2025
@@ -73,7 +73,7 @@ const RegistrationPage = () => {
                       </a>
                     </TableCell>
                     <TableCell>
-                      28 Juli 2025 (online jam 13.00 WIB via Meet Online)
+                      12 Agustus 2025 (online jam 13.00 WIB via Meet Online)
                     </TableCell>
                   </TableRow>
                   <TableRow>
