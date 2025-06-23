@@ -4,11 +4,10 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const careerProspects = [
-  "Digital Marketing Strategist",
-  "Product Manager (Teknologi)",
-  "Innovation Consultant",
-  "Business Development (Tech Industry)",
-  "Brand Manager untuk Produk Digital",
+  "Head Of Marketing and Inovation",
+  "Director of Marketing and Innovation",
+  "Head of Brand Marketing",
+  "Managing Director of Small and Mediun Enterprises",
 ];
 
 const bannerImages = [
