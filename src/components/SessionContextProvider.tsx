@@ -7,7 +7,6 @@ interface SessionContextType {
   session: Session | null;
   loading: boolean;
   isAdmin: boolean;
-  isReviewer: boolean; // Menambahkan properti isReviewer
 }
 
 const SessionContext = createContext<SessionContextType | undefined>(undefined);
@@ -16,7 +15,6 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
-  const [isReviewer, setIsReviewer] = useState(false); // State baru untuk isReviewer
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -24,9 +22,8 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
       setSession(currentSession);
       setLoading(false);
-      // Memeriksa peran admin dan reviewer dari user_metadata
+      // Memeriksa peran admin dari user_metadata
       setIsAdmin(currentSession?.user?.user_metadata?.role === 'admin');
-      setIsReviewer(currentSession?.user?.user_metadata?.role === 'reviewer');
 
       if (event === 'SIGNED_IN' || event === 'USER_UPDATED') {
         if (location.pathname === '/login') {
@@ -43,9 +40,8 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
     supabase.auth.getSession().then(({ data: { session: initialSession } }) => {
       setSession(initialSession);
       setLoading(false);
-      // Memeriksa peran admin dan reviewer saat pemuatan awal
+      // Memeriksa peran admin saat pemuatan awal
       setIsAdmin(initialSession?.user?.user_metadata?.role === 'admin');
-      setIsReviewer(initialSession?.user?.user_metadata?.role === 'reviewer');
     });
 
     return () => subscription.unsubscribe();
@@ -60,7 +56,7 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
   }
 
   return (
-    <SessionContext.Provider value={{ session, loading, isAdmin, isReviewer }}>
+    <SessionContext.Provider value={{ session, loading, isAdmin }}>
       {children}
     </SessionContext.Provider>
   );
