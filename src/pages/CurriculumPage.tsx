@@ -64,6 +64,7 @@ const CurriculumPage = () => {
             <li>Strategic Digital Marketing</li>
             <li>Creative Marketing</li>
             <li>Manajemen Merk Strategis</li>
+            <li>Tesis</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
             👉 Kombinasi hard skills (strategi) + soft skills (kreativitas, leadership).
