@@ -40,7 +40,7 @@ const CurriculumPage = () => {
         <>
           <ul className="list-disc list-inside space-y-1 mt-2">
             <li>Technologi Marketing</li>
-            <li>Customer Behavior & Branding: Psikologi konsumen di era digital.</li>
+            <li>Customer Behavior & Branding</li>
             <li>Manajemen Teknologi & Inovasi: Proses inovasi dari ide ke komersialisasi.</li>
             <li>Rantai Pasok: Efisiensi distribusi produk teknologi.</li>
           </ul>
