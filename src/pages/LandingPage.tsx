@@ -64,7 +64,6 @@ const LandingPage = () => {
                 <li>Director of Marketing and Innovation</li>
                 <li>Head of Brand Marketing</li>
                 <li>Managing Director of Small and Mediun Enterprises</li>
-                <li>Brand Manager untuk Produk Digital</li>
               </ul>
             </CardContent>
           </Card>
