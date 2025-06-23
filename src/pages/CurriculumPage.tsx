@@ -59,7 +59,7 @@ const CurriculumPage = () => {
       content: (
         <>
           <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>Strategic Digital Marketing: SEO, ads, growth hacking.</li>
+            <li>Manajemen Proyek</li>
             <li>Creative Marketing: Storytelling, konten viral, experiential marketing.</li>
             <li>Manajemen Merk Strategis: Brand positioning di pasar kompetitif.</li>
             <li>Manajemen Proyek & SDM: Kepemimpinan dalam tim inovasi.</li>
