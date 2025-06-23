@@ -24,6 +24,7 @@ const CurriculumPage = () => {
             <li>Manajemen Keuangan</li>
             <li>Ekonomi Kreatif</li>
             <li>Strategi Komunikasi Pemasaran Terpadu</li>
+            <li>Seminar proposal</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
             👉 Tujuan: Membekali kemampuan analitis dan manajerial umum sebelum masuk ke spesialisasi.
