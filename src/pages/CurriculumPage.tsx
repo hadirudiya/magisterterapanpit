@@ -96,21 +96,6 @@ const CurriculumPage = () => {
               Program ini menggabungkan konsep bisnis klasik (keuangan, SDM, rantai pasok) dengan pemasaran berbasis teknologi & inovasi, serta pendekatan kreatif/digital. Terlihat fokus pada practical skills untuk industri tech-driven.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Breakdown Per Semester:</h3>
-
-            <Accordion type="single" collapsible className="w-full">
-              {semesters.map((semester) => (
-                <AccordionItem key={semester.value} value={semester.value} className="border-b border-gray-200 dark:border-gray-700">
-                  <AccordionTrigger className={`text-lg font-semibold ${semester.colorClass} hover:no-underline`}>
-                    {semester.title}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 dark:text-gray-300 pb-4">
-                    {semester.content}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Keunikan Program Ini:</h3>
             <ul className="list-disc list-inside space-y-1">
               <li>Hybrid Approach: Gabungan bisnis tradisional + digital disruption + inovasi.</li>
@@ -123,7 +108,7 @@ const CurriculumPage = () => {
               <li>Head Of Marketing and Innovation</li>
               <li>Director of Marketing and Innovation</li>
               <li>Head of Brand Marketing</li>
-              <li>Entrepreneur di bidang tech-based business</li>
+              <li>Managing Director of Small and Medium Enterprises</li>
               <li>Brand Strategist untuk produk digital</li>
             </ul>
           </CardContent>
