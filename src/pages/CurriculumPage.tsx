@@ -41,7 +41,7 @@ const CurriculumPage = () => {
           <ul className="list-disc list-inside space-y-1 mt-2">
             <li>Technologi Marketing</li>
             <li>Customer Behavior & Branding</li>
-            <li>Manajemen Teknologi & Inovasi: Proses inovasi dari ide ke komersialisasi.</li>
+            <li>Sustaibility Rantai Pasok</li>
             <li>Rantai Pasok: Efisiensi distribusi produk teknologi.</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
