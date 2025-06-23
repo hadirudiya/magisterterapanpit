@@ -12,7 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils"; // Import cn utility for combining tailwind classes
-import RegistrationTimeline from '@/components/RegistrationTimeline'; // Import the new timeline component
+// import RegistrationTimeline from '@/components/RegistrationTimeline'; // Removed import
 
 const RegistrationPage = () => {
   return (
@@ -113,10 +113,10 @@ const RegistrationPage = () => {
           </CardContent>
         </Card>
 
-        {/* New Registration Timeline Section */}
-        <section className="mt-12">
+        {/* Removed Registration Timeline Section */}
+        {/* <section className="mt-12">
           <RegistrationTimeline />
-        </section>
+        </section> */}
 
         {/* Biaya Pendidikan Section - Moved and Modified */}
         <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 mt-8">
