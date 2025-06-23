@@ -22,7 +22,7 @@ const CurriculumPage = () => {
             <li>Statistik Bisnis</li>
             <li>Analisis dan Sistem Keputusan</li>
             <li>Manajemen Keuangan</li>
-            <li>Ekonomi Kreatif: Konteks industri kreatif (startup, content, digital produk).</li>
+            <li>Ekonomi Kreatif</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
             👉 Tujuan: Membekali kemampuan analitis dan manajerial umum sebelum masuk ke spesialisasi.
