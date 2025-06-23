@@ -20,7 +20,7 @@ const CurriculumPage = () => {
         <>
           <ul className="list-disc list-inside space-y-1 mt-2">
             <li>Statistik Bisnis</li>
-            <li>Sistem & TI: Pemahaman infrastruktur teknologi pendukung pemasaran (e.g., CRM, AI tools).</li>
+            <li>Analisis dan Sistem Keputusan</li>
             <li>Manajemen Keuangan: Penting untuk menghitung ROI kampanye digital atau proyek inovasi.</li>
             <li>Ekonomi Kreatif: Konteks industri kreatif (startup, content, digital produk).</li>
           </ul>
