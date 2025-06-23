@@ -9,7 +9,7 @@ import { toast } from "sonner"; // Import toast from sonner
 
 const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const { session } = useSession();
+  const { session, isAdmin } = useSession(); // Dapatkan isAdmin dari useSession
 
   const closeSheet = () => setIsSheetOpen(false);
 
@@ -39,7 +39,7 @@ const Header = () => {
         <Link to="/" className="flex items-center space-x-2">
           <img 
             src="public/logoPolimediaJPEGheader.jpeg"
-            alt="" 
+            alt="Logo Polimedia" // Tambahkan alt text yang deskriptif
             className="h-12 w-auto object-contain" 
           />
         </Link>
@@ -70,6 +70,13 @@ const Header = () => {
                     Pendaftaran
                   </Button>
                 </Link>
+                {isAdmin && ( // Tampilkan tautan Dashboard Admin hanya jika isAdmin true
+                  <Link to="/admin/dashboard" onClick={closeSheet}>
+                    <Button variant="ghost" className="w-full justify-start text-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Dashboard Admin
+                    </Button>
+                  </Link>
+                )}
                 {/* Conditional Auth Button and User Email for Mobile */}
                 {session && session.user ? (
                   <>
@@ -112,6 +119,13 @@ const Header = () => {
               Pendaftaran
             </Button>
           </Link>
+          {isAdmin && ( // Tampilkan tautan Dashboard Admin hanya jika isAdmin true
+            <Link to="/admin/dashboard">
+              <Button variant="ghost" className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                Dashboard Admin
+              </Button>
+            </Link>
+          )}
           {/* Conditional Auth Button and User Email for Desktop */}
           {session && session.user ? (
             <>

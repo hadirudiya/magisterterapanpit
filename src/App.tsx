@@ -13,7 +13,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import { SessionContextProvider } from "./components/SessionContextProvider";
-import ProtectedRoute from "./components/ProtectedRoute"; // Import the new ProtectedRoute
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminProtectedRoute from "./components/AdminProtectedRoute"; // Import the new AdminProtectedRoute
+import AdminDashboard from "./pages/AdminDashboard"; // Import the new AdminDashboard
 
 const queryClient = new QueryClient();
 
@@ -34,9 +36,14 @@ const App = () => (
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/login" element={<Login />} />
 
-                {/* Protected Route for Registration Form */}
+                {/* Protected Route for Registration Form (requires any login) */}
                 <Route element={<ProtectedRoute />}>
                   <Route path="/register/form" element={<RegistrationFormPage />} />
+                </Route>
+
+                {/* Protected Route for Admin Dashboard (requires admin role) */}
+                <Route element={<AdminProtectedRoute />}>
+                  <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 </Route>
 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
