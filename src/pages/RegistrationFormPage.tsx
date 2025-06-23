@@ -40,7 +40,7 @@ const formSchema = z.object({
   cvResume: z.string().url("Link CV/Resume harus berupa URL yang valid.").min(1, "Link CV/Resume wajib diisi."),
   suratRekomendasi: z.string().url("Link Surat Rekomendasi harus berupa URL yang valid.").min(1, "Link Surat Rekomendasi wajib diisi."),
   proposalStudi: z.string().url("Link Proposal Rencana Studi harus berupa URL yang valid.").min(1, "Link Proposal Rencana Studi wajib diisi."),
-  portofolio: z.string().url("Link Portofolio harus berupa URL yang valid.").optional(), // New field for portofolio
+  portofolio: z.string().url("Link Portofolio harus berupa URL yang valid.").min(1, "Link Portofolio wajib diisi."), // Removed .optional() and added min(1)
 });
 
 const RegistrationFormPage = () => {
@@ -258,7 +258,7 @@ const RegistrationFormPage = () => {
                   name="portofolio"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Link Portofolio (Opsional)</FormLabel>
+                      <FormLabel>Link Portofolio</FormLabel>
                       <FormControl>
                         <Input placeholder="Link ke Google Drive/Behance/GitHub/dll." {...field} />
                       </FormControl>
