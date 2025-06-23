@@ -113,11 +113,6 @@ const RegistrationPage = () => {
           </CardContent>
         </Card>
 
-        {/* Removed Registration Timeline Section */}
-        {/* <section className="mt-12">
-          <RegistrationTimeline />
-        </section> */}
-
         {/* Biaya Pendidikan Section - Moved and Modified */}
         <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 mt-8">
           <CardHeader className="p-0 mb-4">
@@ -172,6 +167,24 @@ const RegistrationPage = () => {
                 <p>Dr. Arrahmah Aprilia, ST.,MT</p>
                 <a href="https://wa.me/6281219533966" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">
                   WhatsApp: 081219533966
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <Phone className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <p className="font-semibold">Mohammad Cipto Sugiono, ST., MT</p>
+                <a href="https://wa.me/6285780166602" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">
+                  WhatsApp: 085780166602
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <Phone className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+              <div>
+                <p className="font-semibold">Hadi Rudiya, S.Pd.,M.M.Inov.</p>
+                <a href="https://wa.me/6285372523542" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">
+                  WhatsApp: 085372523542
                 </a>
               </div>
             </div>
