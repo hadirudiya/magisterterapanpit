@@ -97,8 +97,8 @@ const RegistrationPage = () => {
                     <TableCell>21-26 Agustus 2025</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Pelantikan Mahasiswa Baru</TableCell>
-                    <TableCell colSpan={2} className="text-center">8 September 2025</TableCell>
+                    <TableCell className="font-medium">Penyambutan</TableCell>
+                    <TableCell colSpan={2} className="text-center">25 Agustus 2025</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Matrikulasi</TableCell>
