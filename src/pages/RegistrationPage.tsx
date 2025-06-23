@@ -92,11 +92,6 @@ const RegistrationPage = () => {
                     <TableCell>20 Agustus 2025</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Pengumuman Akhir<br /><span className="text-sm italic">(Dapat dicek pada menu Hasil setelah login)</span></TableCell>
-                    <TableCell>2 Agustus 2025</TableCell>
-                    <TableCell>30 Agustus 2025</TableCell>
-                  </TableRow>
-                  <TableRow>
                     <TableCell className="font-medium">Daftar Ulang</TableCell>
                     <TableCell>4 Agustus 2025 - 9 Agustus 2025</TableCell>
                     <TableCell>1 September 2025 - 6 September 2025</TableCell>
