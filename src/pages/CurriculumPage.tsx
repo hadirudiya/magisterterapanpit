@@ -21,7 +21,7 @@ const CurriculumPage = () => {
           <ul className="list-disc list-inside space-y-1 mt-2">
             <li>Statistik Bisnis</li>
             <li>Analisis dan Sistem Keputusan</li>
-            <li>Manajemen Keuangan: Penting untuk menghitung ROI kampanye digital atau proyek inovasi.</li>
+            <li>Manajemen Keuangan</li>
             <li>Ekonomi Kreatif: Konteks industri kreatif (startup, content, digital produk).</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
