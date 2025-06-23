@@ -122,7 +122,7 @@ const CurriculumPage = () => {
             <ul className="list-disc list-inside space-y-1">
               <li>Head Of Marketing and Innovation</li>
               <li>Director of Marketing and Innovation</li>
-              <li>Innovation Manager di perusahaan korporat</li>
+              <li>Head of Brand Marketing</li>
               <li>Entrepreneur di bidang tech-based business</li>
               <li>Brand Strategist untuk produk digital</li>
             </ul>
