@@ -62,7 +62,7 @@ const LandingPage = () => {
               <ul className="list-disc list-inside space-y-2">
                 <li>Head Of Marketing and Inovation</li>
                 <li>Director of Marketing and Innovation</li>
-                <li>Innovation Consultant</li>
+                <li>Head of Brand Marketing</li>
                 <li>Business Development (Tech Industry)</li>
                 <li>Brand Manager untuk Produk Digital</li>
               </ul>
