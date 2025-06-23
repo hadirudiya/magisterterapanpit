@@ -71,21 +71,6 @@ const CurriculumPage = () => {
         </>
       ),
     },
-    {
-      value: "semester-4",
-      title: "Semester 4 (Tesis)",
-      colorClass: "text-orange-600 dark:text-orange-400",
-      content: (
-        <>
-          <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>Metodologi & Tesis: Aplikasi langsung ke kasus riil (e.g., strategi pemasaran untuk startup tech).</li>
-          </ul>
-          <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
-            👉 Biasanya berbasis proyek atau kolaborasi dengan industri.
-          </p>
-        </>
-      ),
-    },
   ];
 
   return (
