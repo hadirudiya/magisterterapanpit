@@ -63,7 +63,7 @@ const LandingPage = () => {
                 <li>Head Of Marketing and Inovation</li>
                 <li>Director of Marketing and Innovation</li>
                 <li>Head of Brand Marketing</li>
-                <li>Managing Director of Small and Mediun Enterprises</li>
+                <li>Managing Director of Small and Medium Enterprises</li>
               </ul>
             </CardContent>
           </Card>
