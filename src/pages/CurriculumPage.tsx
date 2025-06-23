@@ -61,7 +61,7 @@ const CurriculumPage = () => {
           <ul className="list-disc list-inside space-y-1 mt-2">
             <li>Manajemen Proyek</li>
             <li>Leadership</li>
-            <li>Manajemen Merk Strategis: Brand positioning di pasar kompetitif.</li>
+            <li>Strategic Digital Marketing</li>
             <li>Manajemen Proyek & SDM: Kepemimpinan dalam tim inovasi.</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
