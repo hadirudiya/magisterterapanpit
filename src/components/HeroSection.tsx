@@ -7,7 +7,7 @@ const careerProspects = [
   "Head Of Marketing and Inovation",
   "Director of Marketing and Innovation",
   "Head of Brand Marketing",
-  "Managing Director of Small and Mediun Enterprises",
+  "Managing Director of SMEs",
 ];
 
 const bannerImages = [
