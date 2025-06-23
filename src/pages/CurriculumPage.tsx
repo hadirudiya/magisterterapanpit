@@ -42,7 +42,7 @@ const CurriculumPage = () => {
             <li>Technologi Marketing</li>
             <li>Customer Behavior & Branding</li>
             <li>Sustaibility Rantai Pasok</li>
-            <li>Rantai Pasok: Efisiensi distribusi produk teknologi.</li>
+            <li>Inovasi Bisnis berbasis Teknologi</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
             👉 Fokus pada integrasi teknologi, perilaku konsumen, dan logistik.
