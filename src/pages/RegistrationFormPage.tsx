@@ -263,6 +263,16 @@ const RegistrationFormPage = () => {
                         <Input placeholder="Link ke Google Drive/Behance/GitHub/dll." {...field} />
                       </FormControl>
                       <FormMessage />
+                      <div className="mt-2">
+                        <a 
+                          href="/Format Portofolio Magister Terapan.docx" 
+                          download 
+                          className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium"
+                        >
+                          <Download className="mr-2 h-4 w-4" />
+                          Unduh Format Portofolio
+                        </a>
+                      </div>
                     </FormItem>
                   )}
                 />
