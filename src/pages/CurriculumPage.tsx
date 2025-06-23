@@ -75,7 +75,6 @@ const CurriculumPage = () => {
         <>
           <ul className="list-disc list-inside space-y-1 mt-2">
             <li>Metodologi & Tesis: Aplikasi langsung ke kasus riil (e.g., strategi pemasaran untuk startup tech).</li>
-            <li>Seminar proposal</li>
           </ul>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-1">
             👉 Biasanya berbasis proyek atau kolaborasi dengan industri.
