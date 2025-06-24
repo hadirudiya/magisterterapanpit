@@ -28,7 +28,11 @@ const AdminDashboard = () => {
           </CardHeader>
           <CardContent className="p-0 text-gray-700 dark:text-gray-300 space-y-4">
             <ul className="list-disc list-inside">
-              <li>Melihat daftar pendaftaran</li>
+              <li>
+                <Link to="/admin/registrations" className="text-blue-600 hover:underline dark:text-blue-400">
+                  Melihat Daftar Pendaftaran
+                </Link>
+              </li>
               <li>Mengelola pengguna</li>
               <li>Mengatur jadwal</li>
               <li>Dan banyak lagi... (fitur akan ditambahkan di sini)</li>

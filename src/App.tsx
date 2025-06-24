@@ -16,6 +16,7 @@ import { SessionContextProvider } from "./components/SessionContextProvider";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminProtectedRoute from "./components/AdminProtectedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
+import RegistrationsListPage from "./pages/RegistrationsListPage"; // Import the new page
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
                 {/* Protected Route for Admin Dashboard (requires admin role) */}
                 <Route element={<AdminProtectedRoute />}>
                   <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                  <Route path="/admin/registrations" element={<RegistrationsListPage />} /> {/* New Admin Route */}
                 </Route>
 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
