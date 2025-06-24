@@ -18,12 +18,33 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
   const navigate = useNavigate();
   const location = useLocation();
 
+  const fetchUserProfile = async (userId: string) => {
+    const { data: profile, error } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('id', userId)
+      .single();
+
+    if (error) {
+      console.error("Error fetching user profile:", error);
+      setIsAdmin(false);
+    } else if (profile) {
+      setIsAdmin(profile.role === 'admin');
+    } else {
+      setIsAdmin(false);
+    }
+  };
+
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, currentSession) => {
       setSession(currentSession);
       setLoading(false);
-      // Memeriksa peran admin dari user_metadata
-      setIsAdmin(currentSession?.user?.user_metadata?.role === 'admin');
+
+      if (currentSession?.user) {
+        await fetchUserProfile(currentSession.user.id);
+      } else {
+        setIsAdmin(false);
+      }
 
       if (event === 'SIGNED_IN' || event === 'USER_UPDATED') {
         if (location.pathname === '/login') {
@@ -37,11 +58,14 @@ export const SessionContextProvider: React.FC<{ children: React.ReactNode }> = (
     });
 
     // Pemeriksaan sesi awal
-    supabase.auth.getSession().then(({ data: { session: initialSession } }) => {
+    supabase.auth.getSession().then(async ({ data: { session: initialSession } }) => {
       setSession(initialSession);
       setLoading(false);
-      // Memeriksa peran admin saat pemuatan awal
-      setIsAdmin(initialSession?.user?.user_metadata?.role === 'admin');
+      if (initialSession?.user) {
+        await fetchUserProfile(initialSession.user.id);
+      } else {
+        setIsAdmin(false);
+      }
     });
 
     return () => subscription.unsubscribe();
