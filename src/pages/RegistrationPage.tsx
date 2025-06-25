@@ -140,11 +140,6 @@ const RegistrationPage = () => {
                     <TableCell>Rp 7.500.000,-</TableCell>
                     <TableCell>Setiap semester</TableCell>
                   </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Matrikulasi*</TableCell>
-                    <TableCell>Rp 200.000,-</TableCell>
-                    <TableCell>Per Sks (Maksimum 6 SKS)</TableCell>
-                  </TableRow>
                 </TableBody>
               </Table>
             </div>
