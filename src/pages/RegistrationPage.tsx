@@ -117,7 +117,7 @@ const RegistrationPage = () => {
         <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 mt-8">
           <CardHeader className="p-0 mb-4">
             <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">Biaya Pendidikan Mahasiswa Reguler</CardTitle>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Perkuliahan dilaksanakan senin - jumat, jam 17.00 - 20.00 WIB. dan sabtu 08:00 - 16:00</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Perkuliahan dilaksanakan senin - jumat, jam 17.00 - 21.00 WIB. dan sabtu 08:00 - 16:00</p>
           </CardHeader>
           <CardContent className="p-0 text-gray-700 dark:text-gray-300">
             <div className="overflow-x-auto">
