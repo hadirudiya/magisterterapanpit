@@ -39,9 +39,9 @@ const CurriculumPage = () => {
       content: (
         <>
           <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>Technologi Marketing</li>
+            <li>Teknologi Marketing</li>
             <li>Customer Behavior & Branding</li>
-            <li>Sustaibility Rantai Pasok</li>
+            <li>Sustainability Rantai Pasok</li>
             <li>Inovasi Bisnis berbasis Teknologi</li>
             <li>Metodologi</li>
             <li>Seminar Hasil</li>
@@ -110,6 +110,20 @@ const CurriculumPage = () => {
               <li>Head of Brand Marketing</li>
               <li>Managing Director of Small and Medium Enterprises</li>
             </ul>
+
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Daftar Mata Kuliah per Semester:</h3>
+            <Accordion type="single" collapsible className="w-full">
+              {semesters.map((semester) => (
+                <AccordionItem key={semester.value} value={semester.value}>
+                  <AccordionTrigger className={`text-lg font-semibold ${semester.colorClass}`}>
+                    {semester.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 dark:text-gray-300">
+                    {semester.content}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </CardContent>
         </Card>
       </div>
