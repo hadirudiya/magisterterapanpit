@@ -45,8 +45,8 @@ const RegistrationPage = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Pendaftaran dan upload berkas persyaratan</TableCell>
-                    <TableCell>23 Juni 2025 - 20 Juli 2025</TableCell>
-                    <TableCell>21 Juli 2025 - 11 Agustus 2025</TableCell>
+                    <TableCell>1 Juli 2025 - 20 Juli 2025</TableCell>
+                    <TableCell>1 Juli 2025 - 20 Juli 2025</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Sosialisasi Program Magister Terapan</TableCell>
