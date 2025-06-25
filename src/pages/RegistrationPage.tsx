@@ -143,9 +143,6 @@ const RegistrationPage = () => {
                 </TableBody>
               </Table>
             </div>
-            <p className="text-sm italic text-gray-600 dark:text-gray-400 mt-4">
-              Keterangan: *Mahasiswa yang mengikuti matrikulasi ditetapkan berdasarkan hasil tes tertulis dan wawancara yang dilaksanakan oleh program studi.
-            </p>
           </CardContent>
         </Card>
 
